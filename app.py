@@ -16,10 +16,13 @@ import cv2
 import gradio as gr
 from ultralytics import YOLO
 
-# 优先加载训练好的权重；找不到时回退到官方预训练权重，保证演示不崩溃
-WEIGHTS = "weights/yolov8n_best.pt"
-if not os.path.exists(WEIGHTS):
-    WEIGHTS = "yolov8n.pt"
+# 依次尝试多个权重路径，兼容本地目录结构与 Hugging Face Spaces 根目录部署；
+# 都找不到时回退到官方预训练权重，保证演示不崩溃
+WEIGHTS = "yolov8n.pt"
+for _candidate in ("weights/yolov8n_best.pt", "yolov8n_best.pt"):
+    if os.path.exists(_candidate):
+        WEIGHTS = _candidate
+        break
 
 model = YOLO(WEIGHTS)
 
