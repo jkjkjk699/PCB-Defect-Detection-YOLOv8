@@ -45,6 +45,20 @@ python scripts/train.py --model yolov8n.pt --epochs 50
 python scripts/predict.py --weights weights/yolov8n_best.pt --source 你的图片.jpg
 ```
 
+## 在线演示
+
+项目附带基于 Gradio 的交互式检测演示（`app.py`）：上传一张 PCB 图像，即可实时框出缺陷位置、类别与数量，并可调节置信度阈值。
+
+**本地运行**：
+
+```bash
+pip install -r requirements.txt
+python app.py
+# 浏览器打开 http://127.0.0.1:7860
+```
+
+**在线体验**：本演示已部署到 Hugging Face Spaces，公开链接见仓库 About 栏。
+
 ## 实验结果
 
 在相同数据集与训练配置下，对比 YOLOv8n（nano）与 YOLOv8s（small）两种规模模型，均训练 50 轮，输入尺寸 640×640：
