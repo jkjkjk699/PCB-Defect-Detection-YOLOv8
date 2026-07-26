@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Ultralytics 训练输出（结果已整理到 results/，原始 runs 不提交）
+runs/
+
+# 数据集（体积大，需自行下载）
+datasets/
+*.images/
+*.labels/
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
