@@ -51,7 +51,9 @@ python scripts/predict.py --weights weights/yolov8n_best.pt --source 你的图�
 
 **1. 在线体验（Streamlit Cloud，永久链接）**
 
-本演示已部署到 Streamlit Community Cloud，打开即用，无需安装任何环境。公开链接见仓库 About 栏（部署方式见下方说明）。
+本演示已部署到 Streamlit Community Cloud，打开即用，无需安装任何环境。
+
+👉 在线体验地址：<https://pcb-defect-detection-yolov8-4zjx6ozj6chmptmchgflcc.streamlit.app/>
 
 **2. 答辩备用（Google Colab，临时链接）**
 
