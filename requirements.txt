@@ -1,8 +1,8 @@
-# CPU 版 PyTorch（Streamlit Cloud 免费机器没有 GPU，用 CPU 版体积小、装得快）
+# Streamlit Cloud 当前默认 Python 3.14，云端无 GPU，用 CPU 版 PyTorch
+# torch 版本取自官方 cpu 索引中支持 3.14 的稳定版
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.5.1+cpu
-torchvision==0.20.1+cpu
-
+torch==2.9.0+cpu
+torchvision
 ultralytics>=8.4.0
 opencv-python-headless>=4.8.0
 numpy>=1.24.0
