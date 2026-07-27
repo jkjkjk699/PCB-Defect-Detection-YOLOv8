@@ -1,7 +1,12 @@
+# CPU 版 PyTorch（Streamlit Cloud 免费机器没有 GPU，用 CPU 版体积小、装得快）
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+
 ultralytics>=8.4.0
-torch>=2.0.0
-opencv-python>=4.8.0
+opencv-python-headless>=4.8.0
 numpy>=1.24.0
 matplotlib>=3.7.0
 pandas>=2.0.0
+streamlit>=1.30.0
 gradio>=4.0.0

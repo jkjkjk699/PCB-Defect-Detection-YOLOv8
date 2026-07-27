@@ -47,9 +47,17 @@ python scripts/predict.py --weights weights/yolov8n_best.pt --source 你的图�
 
 ## 在线演示
 
-项目附带基于 Gradio 的交互式检测演示（`app.py`）：上传一张 PCB 图像，即可实时框出缺陷位置、类别与数量，并可调节置信度阈值。
+上传一张 PCB 图像，即可实时框出缺陷位置、类别与数量，并可调节置信度阈值。提供三种使用方式：
 
-**本地运行**：
+**1. 在线体验（Streamlit Cloud，永久链接）**
+
+本演示已部署到 Streamlit Community Cloud，打开即用，无需安装任何环境。公开链接见仓库 About 栏（部署方式见下方说明）。
+
+**2. 答辩备用（Google Colab，临时链接）**
+
+仓库附带 `demo_colab.ipynb`。在 [Colab](https://colab.research.google.com/) 中打开该笔记本，依次运行各单元格（或 Runtime → Run all），最后一个单元格会输出一个 `*.gradio.live` 临时公网链接，72 小时内有效，适合答辩当天现场演示。
+
+**3. 本地运行（Gradio）**
 
 ```bash
 pip install -r requirements.txt
@@ -57,7 +65,7 @@ python app.py
 # 浏览器打开 http://127.0.0.1:7860
 ```
 
-**在线体验**：本演示已部署到 Hugging Face Spaces，公开链接见仓库 About 栏。
+**Streamlit Cloud 部署步骤**：访问 [share.streamlit.io](https://share.streamlit.io) → 用 GitHub 登录 → New app → 选择仓库 `jkjkjk699/PCB-Defect-Detection-YOLOv8`、分支 `main`、Main file path 填 `streamlit_app.py` → Deploy。几分钟后即可获得永久公网链接。
 
 ## 实验结果
 
@@ -101,7 +109,11 @@ YOLOv8s 相比 YOLOv8n，mAP50 仅提升约 **1.5 个百分点**，但参数量�
 ```
 PCB-Defect-Detection-YOLOv8/
 ├── README.md
+├── LICENSE                   # MIT 开源协议
 ├── requirements.txt
+├── app.py                    # Gradio 本地演示
+├── streamlit_app.py          # Streamlit Cloud 在线演示
+├── demo_colab.ipynb          # Google Colab 答辩备用演示
 ├── data/
 │   └── pcb.yaml              # 数据集配置（需修改为本机路径）
 ├── scripts/
