@@ -4,7 +4,6 @@
 torch==2.9.0+cpu
 torchvision
 ultralytics>=8.4.0
-opencv-python-headless>=4.8.0
 numpy>=1.24.0
 matplotlib>=3.7.0
 pandas>=2.0.0
